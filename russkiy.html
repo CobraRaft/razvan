@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>РАЗВАН — ПОЗОР!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #00f2ff;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-top: 20vh;
+      text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+      animation: glitch 1s infinite;
+    }
+
+    .clash {
+      font-size: 24px;
+      color: white;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(2px, -2px); }
+      40% { transform: translate(-2px, 2px); }
+      60% { transform: translate(1px, -1px); }
+      80% { transform: translate(-1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    .btn {
+      background-color: red;
+      border: none;
+      padding: 15px 30px;
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 0 20px red;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .signature {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      color: white;
+      font-size: 14px;
+      font-family: monospace;
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 24px;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>РАЗВАН — ПОЗОР!</h1>
+  <div class="clash">Твои мозги такие же пустые, как сервер без админов. 🤡</div>
+  
+  <button class="btn" onclick="window.open('https://discord.gg/XWmahCvagp', '_blank')">💬 Присоединяйся к Discord</button>
+  <button class="btn" onclick="location.href='index.html'">🔙 Вернуться на главную</button>
+
+  <div class="signature">made by tiako 🤖</div>
+
+  <script>
+    const snowCount = 100;
+    for (let i = 0; i < snowCount; i++) {
+      let snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = (Math.random() * 4 + 4) + 's';
+      snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+  <audio autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/nu-pogodi-troll.mp3" type="audio/mpeg">
+  </audio>
+
+</body>
+</html>
