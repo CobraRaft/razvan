@@ -16,9 +16,16 @@
 
     h1 {
       font-size: 60px;
-      margin-top: 20vh;
+      margin-top: 15vh;
       text-shadow: 0 0 10px cyan, 0 0 20px cyan;
       animation: glitch 1s infinite;
+    }
+
+    .clash {
+      font-size: 24px;
+      color: white;
+      margin-top: 20px;
+      padding: 0 10px;
     }
 
     @keyframes glitch {
@@ -30,10 +37,27 @@
       100% { transform: translate(0); }
     }
 
-    .text {
-      margin-top: 20px;
-      font-size: 24px;
-      color: white;
+    .button {
+      background-color: cyan;
+      border: none;
+      padding: 20px 40px;
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      animation: pulse 1s infinite;
+      box-shadow: 0 0 20px cyan;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
 
     .signature {
@@ -63,9 +87,12 @@
 <body>
 
   <h1>RAZVAN TO FRAJER</h1>
-  <div class="text">Witamy na najgłupszej stronie w całym internecie 😂</div>
-  <div class="text">Kliknij przycisk. Albo nie. I tak jesteś tutaj, idioto.</div>
-  <div class="signature">made by Sianko 👊😎</div>
+  <div class="clash">Twoja mama tak brzydka, że nawet CAPTCHA ją nie rozpoznaje 🤡</div>
+
+  <button class="button" onclick="location.href='index.html'">🇫🇷 Powrót do strony francuskiej</button>
+  <button class="button" onclick="window.open('https://discord.gg/XWmahCvagp', '_blank')">🌀 Dołącz na Discord</button>
+
+  <div class="signature">made by tiako 👊😎</div>
 
   <script>
     const snowCount = 80;
@@ -83,6 +110,5 @@
   <audio autoplay loop>
     <source src="https://www.myinstants.com/media/sounds/ciacho.mp3" type="audio/mpeg">
   </audio>
-
 </body>
 </html>
