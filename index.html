@@ -21,6 +21,13 @@
       text-shadow: 0 0 10px red, 0 0 20px red;
     }
 
+    .clash {
+      font-size: 24px;
+      color: white;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.3; }
@@ -62,13 +69,6 @@
       50% { opacity: 0.2; }
     }
 
-    .clash {
-      color: white;
-      font-size: 22px;
-      margin-top: 30px;
-      font-style: italic;
-    }
-
     .signature {
       position: fixed;
       bottom: 10px;
@@ -78,13 +78,26 @@
       font-family: monospace;
       opacity: 0.8;
     }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 24px;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
   </style>
 </head>
 <body>
 
   <h1><b>VAS TE FAIRE FOUTRE RAZVAN</b></h1>
-
-  <div class="clash">T’es tellement nul que quand tu touches un PC, il crash par respect pour toi.</div>
+  <div class="clash">Même Clippy a plus de charisme que toi. T’es l’update oubliée de Windows Vista.</div>
 
   <button class="discord-button" onclick="window.open('https://discord.gg/XWmahCvagp', '_blank')">Rejoins Mon Discord</button>
   <div class="enseigne">⬆️ CLIQUE FDP ⬆️</div>
