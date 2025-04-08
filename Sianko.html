@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>RAZVAN TO FRAJER</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #0ff;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-top: 20vh;
+      text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(2px, -2px); }
+      40% { transform: translate(-2px, 2px); }
+      60% { transform: translate(1px, -1px); }
+      80% { transform: translate(-1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    .text {
+      margin-top: 20px;
+      font-size: 24px;
+      color: white;
+    }
+
+    .signature {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      color: white;
+      font-size: 14px;
+      font-family: monospace;
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 24px;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>RAZVAN TO FRAJER</h1>
+  <div class="text">Witamy na najgłupszej stronie w całym internecie 😂</div>
+  <div class="text">Kliknij przycisk. Albo nie. I tak jesteś tutaj, idioto.</div>
+  <div class="signature">made by Sianko 👊😎</div>
+
+  <script>
+    const snowCount = 80;
+    for (let i = 0; i < snowCount; i++) {
+      let snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = (Math.random() * 4 + 4) + 's';
+      snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+  <audio autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/ciacho.mp3" type="audio/mpeg">
+  </audio>
+
+</body>
+</html>
