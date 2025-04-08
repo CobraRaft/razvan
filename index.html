@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>VAS TE FAIRE FOUTRE RAZVAN</title>
@@ -16,7 +16,7 @@
 
     h1 {
       font-size: 60px;
-      margin-top: 20vh;
+      margin-top: 15vh;
       animation: blink 1s infinite;
       text-shadow: 0 0 10px red, 0 0 20px red;
     }
@@ -36,14 +36,41 @@
     }
 
     @keyframes fall {
-      0% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    .discord-button {
+      background-color: red;
+      border: none;
+      padding: 20px 40px;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      animation: pulse 1s infinite;
+      box-shadow: 0 0 20px red;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .enseigne {
+      font-size: 20px;
+      color: yellow;
+      margin-top: 10px;
+      animation: blink2 0.7s infinite;
+      text-shadow: 0 0 5px yellow, 0 0 10px yellow;
+    }
+
+    @keyframes blink2 {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
     }
 
     .signature {
@@ -65,9 +92,11 @@
 
   <h1><b>VAS TE FAIRE FOUTRE RAZVAN</b></h1>
 
-  <!-- Signature -->
+  <button class="discord-button" onclick="window.open('https://discord.gg/XWmahCvagp', '_blank')">Rejoins Mon Discord</button>
+  <div class="enseigne">⬆️ CLIQUE FDP ⬆️</div>
+
   <div class="signature">
-    made by neporrex_ <span>🖕🖕🖕</span>
+    made by neporrex_ <span>💀🖕💢</span>
   </div>
 
   <!-- Neige -->
@@ -83,6 +112,12 @@
       document.body.appendChild(snowflake);
     }
   </script>
+
+  <!-- Son débile -->
+  <audio autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/troll-song.mp3" type="audio/mpeg">
+    Ton navigateur est trop claqué pour lire l’audio 💀
+  </audio>
 
 </body>
 </html>
