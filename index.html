@@ -26,21 +26,7 @@
       50% { opacity: 0.3; }
     }
 
-    .snowflake {
-      position: fixed;
-      top: -10px;
-      color: white;
-      font-size: 24px;
-      user-select: none;
-      animation: fall linear infinite;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
-
-    .discord-button {
+    .discord-button, .page-button {
       background-color: red;
       border: none;
       padding: 20px 40px;
@@ -49,9 +35,12 @@
       font-weight: bold;
       border-radius: 10px;
       cursor: pointer;
-      margin-top: 30px;
+      margin-top: 20px;
       animation: pulse 1s infinite;
       box-shadow: 0 0 20px red;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @keyframes pulse {
@@ -82,10 +71,6 @@
       font-family: monospace;
       opacity: 0.8;
     }
-
-    .signature span {
-      margin-left: 5px;
-    }
   </style>
 </head>
 <body>
@@ -95,11 +80,10 @@
   <button class="discord-button" onclick="window.open('https://discord.gg/XWmahCvagp', '_blank')">Rejoins Mon Discord</button>
   <div class="enseigne">⬆️ CLIQUE FDP ⬆️</div>
 
-  <div class="signature">
-    made by neporrex_ <span>💀🖕💢</span>
-  </div>
+  <button class="page-button" onclick="location.href='polska.html'">🇵🇱 VAS VOIR LA PAGE POLONAISE</button>
 
-  <!-- Neige -->
+  <div class="signature">made by neporrex_ 💀🖕💢</div>
+
   <script>
     const snowCount = 100;
     for (let i = 0; i < snowCount; i++) {
@@ -113,11 +97,8 @@
     }
   </script>
 
-  <!-- Son débile -->
   <audio autoplay loop>
     <source src="https://www.myinstants.com/media/sounds/troll-song.mp3" type="audio/mpeg">
-    Ton navigateur est trop claqué pour lire l’audio 💀
   </audio>
-
 </body>
 </html>
